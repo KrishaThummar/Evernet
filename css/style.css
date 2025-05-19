@@ -1,0 +1,974 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* nunito-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/nunito-v26-latin-200.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-200.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/nunito-v26-latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-300.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-v26-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/nunito-v26-latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/nunito-v26-latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-600.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/nunito-v26-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/nunito-v26-latin-800.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-800.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+  /* nunito-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/nunito-v26-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+         url('../fonts/nunito-v26-latin-900.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  }
+
+:root{
+    --red: #e91a2f;
+    --textdark:#343940;
+    --textlight:#252433;
+    --textwhite: white;
+    --lightgray:#b0b0b0;
+}
+body{
+    font-family: 'nunito',sans-serif;
+    line-height: 26px;
+    /* overflow-x: hidden; */
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+.spacer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.red-bg{
+  background-color: var(--red);
+}
+.red-f{
+  color: var(--red);
+}
+.text-dark{
+  color: var(--textdark);
+}
+.text-light{
+  color: var(--textlight);
+}
+.text-white{
+  color: var(--textwhite);
+}
+.lightgray{
+  background-color: var(--lightgray);
+}
+
+/* ************************* top header ************************* */
+
+.bg-transparent{  
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+}
+.banner{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/header_img.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 150vh;
+}
+
+.top-header{
+ border-bottom: 1px solid #EAEAEA36;
+
+}
+.img{
+  padding-top: 115px;
+  z-index: -1 !important;
+}
+.social-icon a{
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+  &:hover{
+    background-color: #E5E5E5;
+  }
+}
+.main_menu{
+  display: flex;
+}
+.main_menu li a{
+  padding: 15px 20px;
+  display: block;
+  color: var(--textlight);
+  text-transform: capitalize;
+}
+.main_menu li:hover > a{
+  color: #e91a2f !important;
+  transition-duration: .3s;
+}
+.main_menu li{
+  position: relative;
+}
+.sub_menu{
+  text-align: left;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: #e91a2f;
+  width: 200px;
+  display: none;
+  border-radius: 15px;
+}
+.sub_menu li:hover{
+  background-color: white;
+  border-radius: 15px;
+}
+.sub_menu li a {
+  display: block;  
+}
+.main_menu li:hover .sub_menu{
+  display: block;
+}
+.offcanvas{
+  width: 350px !important;
+  background-color: var(--textlight);
+}
+.dropdown-menu{
+  border: none !important;
+  outline: none !important;
+}
+.mob_sub_menu a{
+  color: white !important;
+}
+.mob_sub_menu li{
+  outline: none !important;
+  border: none !important;
+}
+.mob_sub_menu li {
+  background-color: #343940;
+  outline: none !important;
+  border: none !important;
+}
+.mob_menu:hover .mob_sub_menu{
+  display: block;
+}
+.mob_sub_menu{
+  display: none;
+}
+.get:hover{
+  background-color: #C91729;
+  transition-duration: .3s;
+}
+
+/* ************************* baner ************************* */
+.banner{
+  padding-top: 150px;
+}
+.banner-con{
+  position: absolute;
+  z-index: 1;
+}
+.con i{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+  transform:rotate(45deg);
+}
+.envert-text{
+  font-size: 80px;
+  width: 70%;
+  line-height: 1.2;
+}
+.banner-list ul li i{
+  color: white;
+  font-size: 14px;
+}
+.play i{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: red;
+}
+/* .plat-btn::before{
+  content: '';
+  position: absolute;
+  bottom:3%;
+  left: 19%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  animation: play 3s infinite;
+}
+.plat-btn::after{
+  content: '';
+  position: absolute;
+  bottom:3%;
+  left: 19%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  animation: play 3s infinite;
+} */
+
+/* ************************* services ************************* */
+
+/* .service-con{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+} */
+.wifi i{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: #e91a2f;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+.wifi-con h1{
+  margin: 0 30%;
+  font-weight: 800;
+  color: var(--textdark);
+}
+.ser-wifi i{
+  font-size: 40px;
+}
+.services .card-body{
+  padding: 32px 25px;
+}
+.ser-wifi h2{
+  color: var(--textdark);
+  font-size: 28px;
+}
+.ser-wifi p{
+  color: var(--textdark);
+  font-weight: 400;
+}
+
+/* ************************* about ************************* */
+
+.about-con i{
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-about{
+  position: relative;
+}
+
+.red-con{
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 67%;
+}
+.black-con{
+  background-color: var(--textlight);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+/* ************************* about-icon ************************* */
+
+.icon-sec .card-body p{
+  color: var(--textdark);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.card-sec{
+  border: none;
+}
+
+/* ************************* input-sec ************************* */
+
+.input-con i{
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+}
+.input-ser{
+  background-image: url('../image/map.png');
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: #252433;
+  padding: 100px 0;
+}
+.check-input{
+  position: relative;
+}
+.check-input input{
+  width: 700px;
+  padding: 20px 0;
+  border: none;
+}
+input::placeholder{
+  padding: 0 30px;
+  color: var(--lightgray);
+}
+.check-input a{
+  position: absolute;
+  right: 5px;
+  top: 4%;
+}
+
+/* ************************* pricing ************************* */
+
+.card-body-pr{
+  padding: 35px 50px;
+}
+.promo h6{
+  padding: 10px 20px;
+  background-color: #2EBF26;
+  color: white;
+  border-radius: 20px;
+}
+.mbps{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 5px lightgray solid;
+  border-radius: 50%;
+}
+.mbps::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid;
+  border-color: var(--red) transparent transparent transparent;
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+  transform: rotate(45deg);
+}
+
+.mbps-2{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 5px lightgray solid;
+  border-radius: 50%;
+}
+.mbps-2::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid;
+  border-color: var(--red) var(--red) transparent transparent;
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+  transform: rotate(45deg);
+}
+
+.mbps-3{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 5px lightgray solid;
+  border-radius: 50%;
+}
+.mbps-3::before{
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 5px solid;
+  border-color: var(--red) var(--red) var(--red) transparent;
+  border-radius: 50%;
+  top: -5px;
+  left: -5px;
+  transform: rotate(45deg);
+}
+.wifi-pr i{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.102);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: var(--red);
+}
+.pricing-list ul li i{
+  color: var(--red);
+  font-size: 14px;
+}
+.pricing-list p{
+  color: var(--textlight);
+}
+.month h2{
+  color: var(--textdark);
+  font-weight: 800;
+  font-size: 36px;
+}
+.month span{
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--textdark);
+}
+
+/* ************************* internet ************************* */
+.internet{
+  padding: 0 0 100px 0;
+}
+.inter-con i{
+  width: 40px;
+  height: 40px;
+  background-color: var(--red);
+  color: white;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ************************* testimonial ************************* */
+
+.testimonial{
+  background-image: linear-gradient(180deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/japanese-spouses-using-tablet-browsing-internet-sitting-on-couch-indoor.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  background-attachment: fixed;
+}
+.testimonial-con i{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: var(--red);
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-con .lorem{
+  margin: 0 350px;
+  /* width: 45%; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.test-img img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.test-name{
+  font-size: 18px;
+}
+.test-pos{
+  font-size: 14px;
+}
+.radius-br{
+  border-radius: 10px;
+}
+/* .testimonial{
+  position: relative;
+}
+.testimonial-rew{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+} */
+.rew-area{
+  width: 380px !important;
+  /* height: 0px !important; */
+  /* position: relative; */
+  /* margin-bottom: -225px; */
+  /* margin-top: -100px; */
+  /* width: 350px !important; */
+  /* z-index: 999; */
+ }
+ .review{
+  position: absolute;
+  margin-bottom: 300px !important;
+ }
+/* ************************* news-sec ************************* */
+/* .news{
+  padding-top: 250px 0;
+} */
+.date{
+  color: var(--lightgray);
+}
+.new-imges1{
+  position: relative;
+}
+.new-imges{
+  position: relative;
+}
+
+.inter-text-on p{
+  background-color: white;
+  position: absolute;
+  top: 40.5%;
+  padding: 10px;
+  border-radius: 0px 5px 0px 0px;
+  font-size: 14px;
+}
+.read-more:hover{
+  color: #C91729;
+  transition-duration: .3s;
+}
+
+.logo-img img{
+  opacity: 0.7;
+  filter: brightness(0%) contrast(0%) saturate(100%) blur(0px) hue-rotate(0deg);
+  &:hover{
+    opacity: 1;
+    filter: none;
+    transition-duration: .5s;
+    -webkit-filter: none;
+  }
+}
+
+/* ************************* footer ************************* */
+
+.footer-area{
+  background: url('../image/footer-evernet.png');
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  background-color: var(--textlight);
+}
+/* .footer-area::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--textlight);
+} */
+/* .footer-area .row{
+  border-bottom: 4px solid #EAEAEA12;
+} */
+.call-area{
+  border-width: 0 1px 0 1px;
+  border-color: #EAEAEA12;
+  border-style: solid;
+}
+.call-icon{
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex ;
+  align-items: center;
+  justify-content: center;
+}
+.call-det p{
+  font-size: 14px;
+  font-weight: 400;
+}
+.call-det span{
+  font-size: 18px;
+  font-weight: 700;
+}
+.footer-p p{
+  font-size: 14px;
+  font-weight: 400;
+}
+.sub-input{
+  position: relative;
+}
+.sub-input input{
+  width: 433px;
+  padding: 15px 0;
+  border: none;
+}
+input::placeholder{
+  padding: 0 30px;
+  color: var(--lightgray);
+}
+
+.sub-btn a{
+  padding: 10px 30px;
+  position: absolute !important;
+  right: -10px;
+  top: 5%;
+}
+.copy-right{
+  border-top: 1px solid #EAEAEA12 ;
+}
+
+
+/* ************************************************** */
+/* ************************* about-page ************************* */
+/* ************************************************** */
+
+
+/* *************************about-banner************************* */
+.b-about{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/wifi-wireless-router-copy-space.jpg');
+  background-size: cover;
+  background-position: bottom;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+.about-text p{
+  font-size: 50px;
+  font-weight: 900;
+}
+.a-ser{
+  background-color: #F6F6F6;
+}
+.e-about i{
+  text-align: center;
+  padding: 25px 30px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.counter-sec{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, #252433 100%),url('../image/server.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+.cou-img{
+  margin-top: -80px;
+  width: 100%;
+}
+/* *************************counter-start************************* */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    /* margin-bottom: 10px; */
+  }
+}
+.card h3 span{
+  color: #C91729;
+}
+/* Style the counter cards */
+.counter{
+  font-size: 40px;
+  font-weight: 800;
+}
+.card{
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); */
+  padding: 20px 30px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  border-radius: 4px;
+}
+.card span{
+  color: #e91a2f
+}
+.fa {font-size:60px;}
+
+/* *************************counter-finish************************* */
+
+.team-bg{
+  background-color: var(--textlight);
+  padding: 30px 5px 120px 5px;
+  /* width: 282px;
+  height: 205px; */
+}
+.team-pic img{
+  margin-top: -30%;
+  width: 227px;
+  height: 227px;
+  &:hover{
+    transform: scale(0.9);
+    transition-duration: 0.5s;
+  }
+}
+/* .ico .heart{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -350%;
+    left: 28%;
+}
+.ico .eyes{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: -350%;
+    left: 43%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ico{
+    position: absolute;
+    top: -30%;
+    left: 3%;
+    position: relative;
+    opacity: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    z-index: 1;
+    color: #557E30;
+}
+.hover_icon:hover{
+    background-color: #557E30;
+    color: #ffffff;
+}
+.single_item:hover .ico{
+    animation: icon .3s linear;
+    opacity: 1;
+}
+@keyframes icon{
+    from{
+        transform: translateY(30px);
+    }
+    to{
+        transform: translateY(0px);
+        
+    }
+} */
+ /* ************************************************** */
+/* ************************* Packege ************************* */
+/* ************************************************** */
+
+.package{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/the-girl-is-shopping-on-the-internet.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+.pac-sec{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, #252433 100%),url('../image/wifi-router-on-a-table-smart-connection.jpg');
+  background-size: cover;
+  background-position: bottom;
+  object-fit: cover;
+  width: 100%;
+  height: 668px;
+  padding-top: 50px;
+}
+.form-area{
+  background-color: white;
+}
+.form-title{
+  color: var(--textdark);
+}
+.f-input{
+  width: 100%;
+  padding: 15px 40px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  color: #7b7a7a;
+  background-color: #e3e3e3;
+  border: none;
+  outline: none;
+  transition: .2s;
+}
+
+
+/* ************************************************** */
+/* ************************* f-service-page ************************* */
+/* ************************************************** */
+.f-ser{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/business-team-digital-device-technology-connecting-concept.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+
+.f-about{
+  background: url('../image/assets-evernet-bg.png');
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.about-list ul li i{
+  color: var(--red);
+  font-size: 14px;
+}
+/* ************************************************** */
+/* ************************* f-team- ************************* */
+/* ************************************************** */
+.f-team{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/winners.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+.logo-bg{
+  background-color: #252433;
+}
+
+/* ************************************************** */
+/* ************************* f-404-page ************************* */
+/* ************************************************** */
+
+.f-404{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/young-woman-is-working-using-computer.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 775px;
+}
+.f-404 .b-404-con{
+  padding: 180px 0;
+}
+
+/* ************************************************** */
+/* ************************* contact ************************* */
+/* ************************************************** */
+.contact{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/doctor-and-patient-meeting-in-the-office.jpg');
+  background-size: cover;
+  background-position: bottom;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+}
+iframe{
+  width: 100%;
+  height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
