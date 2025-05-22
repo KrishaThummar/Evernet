@@ -183,6 +183,7 @@ ul{
   display: none;
   border-radius: 15px;
 }
+
 .sub_menu li:hover{
   background-color: white;
   border-radius: 15px;
@@ -193,10 +194,27 @@ ul{
 .main_menu li:hover .sub_menu{
   display: block;
 }
+.main_menu_off li a{
+  margin: 10px 0;
+  display: block;
+}
+.sub_menu_off{
+  margin: 10px 0;
+}
+.sub_menu_off li a{
+  display: none;
+}
+.sub_menu_off{
+  display: none;
+}
 .offcanvas{
   width: 350px !important;
-  background-color: var(--textlight);
+  background-color: #343940;
 }
+/* .offcanvas{
+  width: 350px !important;
+  background-color: var(--textlight);
+} */
 .dropdown-menu{
   border: none !important;
   outline: none !important;
@@ -241,6 +259,10 @@ ul{
   align-items: center;
   justify-content: center;
   transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
 }
 .envert-text{
   font-size: 80px;
@@ -285,12 +307,9 @@ ul{
 } */
 
 /* ************************* services ************************* */
-
-/* .service-con{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-} */
+.services{
+  padding: 100px 0;
+}
 .wifi i{
   display: inline-block;
   align-items: center;
@@ -311,11 +330,11 @@ ul{
   font-size: 40px;
 }
 .services .card-body{
-  padding: 32px 25px;
+  padding: 0;
 }
 .ser-wifi h2{
   color: var(--textdark);
-  font-size: 28px;
+  font-size: 27px;
 }
 .ser-wifi p{
   color: var(--textdark);
@@ -323,7 +342,6 @@ ul{
 }
 
 /* ************************* about ************************* */
-
 .about-con i{
   width: 40px;
   height: 40px;
@@ -334,11 +352,9 @@ ul{
   align-items: center;
   justify-content: center;
 }
-
 .right-about{
   position: relative;
 }
-
 .red-con{
   width: 205px;
   height: 205px;
@@ -362,7 +378,7 @@ ul{
   bottom: 10%;
   left: 10%;
 }
-/* ************************* about-icon ************************* */
+/* *************************icon-sec ************************* */
 
 .icon-sec .card-body p{
   color: var(--textdark);
@@ -402,11 +418,12 @@ ul{
 }
 .check-input input{
   width: 700px;
-  padding: 20px 0;
+  padding: 20px 30px;
   border: none;
+  outline: none;
 }
 input::placeholder{
-  padding: 0 30px;
+  /* padding: 0 30px; */
   color: var(--lightgray);
 }
 .check-input a{
@@ -540,7 +557,7 @@ input::placeholder{
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 0;
+  padding: 50px 0;
   background-attachment: fixed;
 }
 .testimonial-con i{
@@ -553,12 +570,11 @@ input::placeholder{
   align-items: center;
   justify-content: center;
 }
+.testimonial h1{
+  font-weight: 800;
+}
 .testimonial-con .lorem{
   margin: 0 350px;
-  /* width: 45%; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 .test-img img{
   width: 60px;
@@ -583,7 +599,7 @@ input::placeholder{
   left: 5%;
 } */
 .rew-area{
-  width: 380px !important;
+  width: 390px;
   /* height: 0px !important; */
   /* position: relative; */
   /* margin-bottom: -225px; */
@@ -591,10 +607,11 @@ input::placeholder{
   /* width: 350px !important; */
   /* z-index: 999; */
  }
- .review{
+ /* .review{
   position: absolute;
   margin-bottom: 300px !important;
- }
+ } */
+ 
 /* ************************* news-sec ************************* */
 /* .news{
   padding-top: 250px 0;
@@ -608,7 +625,6 @@ input::placeholder{
 .new-imges{
   position: relative;
 }
-
 .inter-text-on p{
   background-color: white;
   position: absolute;
@@ -622,6 +638,7 @@ input::placeholder{
   transition-duration: .3s;
 }
 
+/* ************************* logo************************* */
 .logo-img img{
   opacity: 0.7;
   filter: brightness(0%) contrast(0%) saturate(100%) blur(0px) hue-rotate(0deg);
@@ -678,6 +695,7 @@ input::placeholder{
   font-size: 18px;
   font-weight: 700;
 }
+
 .footer-p p{
   font-size: 14px;
   font-weight: 400;
@@ -687,14 +705,14 @@ input::placeholder{
 }
 .sub-input input{
   width: 433px;
-  padding: 15px 0;
+  padding: 15px 20px;
   border: none;
+  outline: none;
 }
 input::placeholder{
-  padding: 0 30px;
+  padding: 40px 30px;
   color: var(--lightgray);
 }
-
 .sub-btn a{
   padding: 10px 30px;
   position: absolute !important;
@@ -878,16 +896,19 @@ input::placeholder{
 .form-title{
   color: var(--textdark);
 }
-.f-input{
+.f-name input{
   width: 100%;
-  padding: 15px 40px;
+  padding: 15px 20px;
   text-transform: capitalize;
   border-radius: 5px;
   color: #7b7a7a;
   background-color: #e3e3e3;
-  border: none;
-  outline: none;
+  border: none !important;
+  outline: none !important;
   transition: .2s;
+}
+input::placeholder{
+  padding: 0 !important;
 }
 
 
@@ -944,6 +965,18 @@ input::placeholder{
 }
 .f-404 .b-404-con{
   padding: 180px 0;
+}
+
+/* ************************************************** */
+/* ************************* blog ************************* */
+/* ************************************************** */
+.blog{
+  background-image:linear-gradient(90deg, rgba(37, 36, 51,0.6) 30%, rgba(151, 151, 151,0.6) 100%),url('../image/friends-using-mobile-and-laptop-.jpg');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
 }
 
 /* ************************************************** */

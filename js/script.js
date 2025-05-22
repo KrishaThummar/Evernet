@@ -6,6 +6,8 @@ $(document).ready(function(){
             nav:false,
             center:true,
             dots:false,
+            // autoplay:true,
+            // autoplayTimeout:3000,
             startPosition:1,
             responsive:{
             1440:{
