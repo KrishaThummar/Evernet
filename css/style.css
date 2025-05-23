@@ -329,6 +329,19 @@ ul{
 .ser-wifi i{
   font-size: 40px;
 }
+.ser-wifi:hover{
+  background-color: var(--red);
+  transition-duration: .8s;
+}
+.ser-wifi:hover i{
+  color: white;
+}
+.ser-wifi:hover h2{
+  color: white;
+}
+.ser-wifi:hover p{
+  color: white;
+}
 .services .card-body{
   padding: 0;
 }
@@ -695,10 +708,15 @@ input::placeholder{
   font-size: 18px;
   font-weight: 700;
 }
-
 .footer-p p{
   font-size: 14px;
   font-weight: 400;
+}
+.footer-p ul li p{
+  transition-duration: .5s;
+  &:hover{
+    color: var(--lightgray) !important;
+  }
 }
 .sub-input{
   position: relative;
@@ -718,6 +736,9 @@ input::placeholder{
   position: absolute !important;
   right: -10px;
   top: 5%;
+  &:hover{
+    background-color: #C91729;
+  }
 }
 .copy-right{
   border-top: 1px solid #EAEAEA12 ;

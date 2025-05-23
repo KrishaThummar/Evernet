@@ -6,8 +6,8 @@ $(document).ready(function(){
             nav:false,
             center:true,
             dots:false,
-            // autoplay:true,
-            // autoplayTimeout:3000,
+            autoplay:true,
+            autoplayTimeout:3000,
             startPosition:1,
             responsive:{
             1440:{
@@ -29,8 +29,15 @@ $(document).ready(function(){
                   startPosition:4,
 
             },
-            376:{
+            375:{
                   items:1,
+                  center:true,
+                  startPosition:4,
+            },
+            320:{
+                  items:1,
+                  center:true,
+                  startPosition:4,
             }
       }
 });
