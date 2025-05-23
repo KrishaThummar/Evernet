@@ -590,7 +590,7 @@
     }
     .card{
         width: 100% !important;
-        padding: 0 20px !important ;
+        padding: 20px 30px !important ;
     }
 
 /* **************************about************************** */
@@ -616,17 +616,22 @@
         padding-top: 15px !important;
     }
     .right-img img{
-        width: 70% !important;
+        width: 90% !important;
     }
      .red-100{
         position: absolute !important;
-        left: 50% !important;
-        top: 0;
+        left: 52% !important;
+        top: 0 !important;
+    }
+    .red-con{
+        width: 190px !important;
+        height: 190px !important;
+        background-color: var(--red) !important;
     }
     .black-con{
         position: absolute !important;
-        top: 150px !important;
-        left: -180px !important;
+        top: 200px !important;
+        left: -210px !important;
     }
 
 /* **************************icon-sec************************** */
@@ -658,6 +663,7 @@
     }
     .card-pr{
         width: 100% !important;
+        padding: 0 20px !important;
     }
 
 /* **************************interet-sec************************** */
@@ -768,7 +774,7 @@
     .sub-btn a{
         padding: 10px 30px;
         position: absolute !important;
-        right: 62px !important;
+        right: 60px !important;
         top: 5% !important;
     }
     .copy-con p{
@@ -919,7 +925,8 @@
         margin: 0 50px !important;
     }
     .card{
-        width: 350px !important;
+        width: 100% !important;
+        padding: 20px 30px !important ;
     }
 
 /* **************************about************************** */
@@ -945,17 +952,22 @@
         margin-top: 15px !important;
     }
     .right-img img{
-        width: 100% !important;
+        width: 95% !important;
     }
     .red-100{
         position: absolute !important;
-        left: 45% !important;
-        top: 2% !important;
+        left: 54% !important;
+        top: 0 !important;
+    }
+    .red-con{
+        width: 160px !important;
+        height: 160px !important;
+        background-color: var(--red) !important;
     }
     .black-con{
         position: absolute !important;
         top: 220px !important;
-        left: -130px !important;
+        left: -190px !important;
     }
 
 /* **************************icon-sec************************** */
@@ -1223,20 +1235,25 @@
     .pr p{
         font-size: 14px !important;
         width: 100% !important;
-        margin-left: 0 !important;
+        margin-top: 15px !important;
     }
     .right-img img{
-        width: 100% !important;
+        width: 95% !important;
     }
     .red-100{
         position: absolute !important;
-        left: 36% !important;
+        left: 49% !important;
         top: 5% !important;
+    }
+    .red-con{
+        width: 150px !important;
+        height: 150px !important;
+        background-color: var(--red) !important;
     }
     .black-con{
         position: absolute !important;
         top: 180px !important;
-        left: -100px !important;
+        left: -145px !important;
     }
 
 /* **************************input-sec************************** */

@@ -16,7 +16,7 @@ $(document).ready(function(){
             1024:{
                   items:2,
                   center:false,
-                  startPosition:1,
+                  startPosition:4,
             },
             768:{
                   items:2,
@@ -25,12 +25,15 @@ $(document).ready(function(){
             },
             425:{
                   items:1,
+                  center:true,
+                  startPosition:4,
+
             },
             376:{
                   items:1,
             }
-            }
-            });
+      }
+});
 
             function startCounting(elementId, start = 1, end = 1000, interval = 1000) {
                   let current = start;
