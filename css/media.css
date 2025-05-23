@@ -218,7 +218,7 @@
         width: 100% !important;
     }
     .sub-input input{
-        width: 740px !important;
+        width: 100% !important;
     }
     .sub-input input::placeholder{
         font-size: 13px !important;
@@ -226,7 +226,7 @@
     .sub-btn a{
         padding: 10px 30px;
         position: absolute !important;
-        right: 200px !important;
+        right: 5px !important;
         top: 6%;
     }
 
@@ -581,6 +581,11 @@
 
 
 @media screen and (max-width:426px) and (min-width:377px){
+    .play{
+        flex-wrap: wrap !important;
+        font-size: 14px !important;
+        margin-top: 20px !important;
+    }
 /* **************************service************************** */
     .services{
         padding: 50px 0 !important;
@@ -766,7 +771,7 @@
         width: 100% !important;
     }
     .sub-input input{
-        width: 345px !important;
+        width: 100% !important;
     }
     .sub-input input::placeholder{
         font-size: 13px !important;
@@ -774,7 +779,7 @@
     .sub-btn a{
         padding: 10px 30px;
         position: absolute !important;
-        right: 15% !important;
+        right: 1% !important;
         top: 5% !important;
     }
     .copy-con p{
@@ -783,7 +788,6 @@
     }
     .copy-icon {
         font-size: 12px !important;
-        /* text-align: center !important; */
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
@@ -913,7 +917,7 @@
     }
     .play{
         flex-wrap: wrap !important;
-        font-size: 14px !important;
+        font-size: 16px !important;
         margin-top: 20px !important;
     }
 
@@ -1102,20 +1106,28 @@
         width: 100% !important;
     }
     .sub-input input{
-        width: 295px !important;
+        width: 100% !important;
     }
     .sub-input input::placeholder{
         font-size: 13px !important;
     }
     .sub-btn a{
         position: absolute !important;
-        right: 60px !important;
+        right: 5px !important;
         font-size: 13px !important;
     }
     .copy-con p{
         font-size: 12px !important;
-        text-align: center !important;
+        text-align: center;
+    } 
+    .copy-icon {
+        font-size: 12px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
+
+
 
 /* ************************************************** */
 /* ************************* About-page ************************* */
@@ -1388,6 +1400,16 @@
         position: absolute !important;
         right: 5px !important;
         top: 5% !important;
+    }
+     .copy-con p{
+        font-size: 12px !important;
+        text-align: center !important;
+    }
+    .copy-icon {
+        font-size: 12px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
 
